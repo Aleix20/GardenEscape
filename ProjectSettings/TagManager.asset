@@ -22,6 +22,7 @@ TagManager:
   - Reward
   - objectiveTriangle
   - Box
+  - ChargeBar
   layers:
   - Default
   - TransparentFX
