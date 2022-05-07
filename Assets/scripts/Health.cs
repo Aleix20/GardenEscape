@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
    
-    public Image  ringHealthBar;
+    public Image  ringHealthBar1, ringHealthBar2;
     
 
     float health, maxHealth = 100;
@@ -28,14 +28,16 @@ public class Health : MonoBehaviour
 
     void HealthBarFiller()
     {
-        
-        ringHealthBar.fillAmount = Mathf.Lerp(ringHealthBar.fillAmount, (health / maxHealth), lerpSpeed);
+
+        ringHealthBar1.fillAmount = Mathf.Lerp(ringHealthBar1.fillAmount, (health / maxHealth), lerpSpeed);
+        ringHealthBar2.fillAmount = Mathf.Lerp(ringHealthBar2.fillAmount, (health / maxHealth), lerpSpeed);
 
     }
     void ColorChanger()
     {
         Color healthColor = Color.Lerp(Color.red, Color.green, (health / maxHealth));
-        ringHealthBar.color = healthColor;
+        ringHealthBar1.color = healthColor;
+        ringHealthBar2.color = healthColor;
     }
 
 

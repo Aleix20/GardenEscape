@@ -15,7 +15,7 @@ public class grabController : MonoBehaviour
 
     bool itemGrabbed = false;
 
-    public Image ringHealthBar;
+    public Image ringHealthBar1, ringHealthBar2;
 
 
     float health, maxHealth = 300;
@@ -28,8 +28,9 @@ public class grabController : MonoBehaviour
     void Update()
     {
         Debug.Log("GrabDetect pos is: " + grabDetect.position);
-        ringHealthBar.rectTransform.position = grabDetect.position;
-        Debug.Log("ringHealthBar pos is: " + ringHealthBar.rectTransform.position);
+        ringHealthBar1.rectTransform.position = grabDetect.position;
+        ringHealthBar2.rectTransform.position = grabDetect.position;
+        //Debug.Log("ringHealthBar pos is: " + ringHealthBar.rectTransform.position);
         if (health > maxHealth) health = maxHealth;
 
         lerpSpeed = 3f * Time.deltaTime;
@@ -59,7 +60,8 @@ public class grabController : MonoBehaviour
          
             if (grabCheck.collider.tag == "Box" && waitTime >= fixTime && !itemGrabbed)
             {
-                ringHealthBar.enabled = false;
+                ringHealthBar1.enabled = false;
+                ringHealthBar2.enabled = false;
                 Debug.Log("Pick up box");
                 itemGrabbed = !itemGrabbed;
                 waitTime = 0.0f;
@@ -112,13 +114,16 @@ public class grabController : MonoBehaviour
     void HealthBarFiller()
     {
 
-        ringHealthBar.fillAmount = Mathf.Lerp(ringHealthBar.fillAmount, (health / maxHealth), lerpSpeed);
+        ringHealthBar1.fillAmount = Mathf.Lerp(ringHealthBar1.fillAmount, (health / maxHealth), lerpSpeed);
+        ringHealthBar2.fillAmount = Mathf.Lerp(ringHealthBar2.fillAmount, (health / maxHealth), lerpSpeed);
 
     }
     void ColorChanger()
     {
         Color healthColor = Color.Lerp(Color.red, Color.green, (health / maxHealth));
-        ringHealthBar.color = healthColor;
+        ringHealthBar1.color = healthColor;
+        ringHealthBar2.color = healthColor;
+
     }
 
 
@@ -127,12 +132,16 @@ public class grabController : MonoBehaviour
     {
         if (health > 0)
         {
-            ringHealthBar.enabled = true;
+            ringHealthBar1.enabled = true;
+            ringHealthBar2.enabled = true;
+
             health -= (damagePoints * 100);
         }
         else if (health <=0)
         {
-            ringHealthBar.enabled = false;
+            ringHealthBar1.enabled = false;
+            ringHealthBar2.enabled = false;
+
         }
 
     }
@@ -141,12 +150,16 @@ public class grabController : MonoBehaviour
 
         if (health < maxHealth)
         {
-            ringHealthBar.enabled = true;
+            ringHealthBar1.enabled = true;
+            ringHealthBar2.enabled = true;
+
             health += (healingPoints * 100);
 
         }else if (health >= maxHealth)
         {
-            ringHealthBar.enabled = false;
+            ringHealthBar2.enabled = false;
+            ringHealthBar1.enabled = false;
+
         }
     }
 }
