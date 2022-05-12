@@ -11,13 +11,14 @@ public class grabController : MonoBehaviour
 
     private Vector3  lastPosition;
     private float waitTime;
+    
 
     private float fixTime = 3.0f;
 
     bool itemGrabbed = false;
 
     public Image ringHealthBar1, ringHealthBar2;
-
+    private doorController door = null;
 
     float health, maxHealth = 300;
     float lerpSpeed;
@@ -43,12 +44,24 @@ public class grabController : MonoBehaviour
         Physics.Raycast(grabDetect.position, Vector3.down, out grabCheck ,rayDist );
         Debug.Log("WaitTime is: " + waitTime);
         Debug.Log(grabCheck.collider.tag);
+        
         if (grabCheck.collider != null  )
         {
+            
             if (grabCheck.collider.tag != "Box" && grabCheck.collider.tag == "PressurePlatePlayer")
             {
-                
+                door = grabCheck.collider.GetComponent<doorController>();
+                door.isactive = false;
+                door.door.SetActive(false);
                 Debug.Log("pressure plate player");
+            }
+            else
+            {
+                if (door != null)
+                {
+                    door.door.SetActive(true);
+                }
+                
             }
             if (grabCheck.collider.tag == "Box" && !itemGrabbed)
             {
