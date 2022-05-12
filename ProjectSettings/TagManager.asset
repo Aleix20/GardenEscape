@@ -23,6 +23,7 @@ TagManager:
   - objectiveTriangle
   - Box
   - ChargeBar
+  - PressurePlatePlayer
   layers:
   - Default
   - TransparentFX

@@ -1789,7 +1789,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressurePlatePlayer
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5106070464853264142, guid: 80ca378d77c40a04ba87b37825acb723,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753235388303011718, guid: 80ca378d77c40a04ba87b37825acb723,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5106070464853264140, guid: 80ca378d77c40a04ba87b37825acb723, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 80ca378d77c40a04ba87b37825acb723, type: 3}
 --- !u!1001 &6769992083713527169
 PrefabInstance:

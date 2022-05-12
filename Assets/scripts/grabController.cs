@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -44,6 +45,11 @@ public class grabController : MonoBehaviour
         Debug.Log(grabCheck.collider.tag);
         if (grabCheck.collider != null  )
         {
+            if (grabCheck.collider.tag != "Box" && grabCheck.collider.tag == "PressurePlatePlayer")
+            {
+                
+                Debug.Log("pressure plate player");
+            }
             if (grabCheck.collider.tag == "Box" && !itemGrabbed)
             {
                 
