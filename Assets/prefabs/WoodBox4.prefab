@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3233070909667567018
+--- !u!1 &5875499584984294842
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2852463499036213008}
-  - component: {fileID: 1169290918778187957}
-  - component: {fileID: 4025884557672563839}
-  - component: {fileID: 8170538922887531843}
+  - component: {fileID: 5880894939233773026}
+  - component: {fileID: 5906656593471947518}
+  - component: {fileID: 5897889605509469202}
+  - component: {fileID: 5876388556218012443}
   m_Layer: 0
-  m_Name: Medieval water bucket
-  m_TagString: Bucket
+  m_Name: WoodBox4
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2852463499036213008
+--- !u!4 &5880894939233773026
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3233070909667567018}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 19.84, y: -5, z: 68.16}
-  m_LocalScale: {x: 2500, y: 2500, z: 800}
+  m_GameObject: {fileID: 5875499584984294842}
+  m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.9, y: -5, z: 50}
+  m_LocalScale: {x: 5, y: 2, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!33 &1169290918778187957
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &5906656593471947518
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3233070909667567018}
-  m_Mesh: {fileID: -8399841202306627044, guid: 1c3d8e3a3e79383479afab4c22ded4d5, type: 3}
---- !u!23 &4025884557672563839
+  m_GameObject: {fileID: 5875499584984294842}
+  m_Mesh: {fileID: 4300000, guid: ed238a904af512d499a6d47f8a583073, type: 3}
+--- !u!23 &5897889605509469202
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3233070909667567018}
+  m_GameObject: {fileID: 5875499584984294842}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -57,13 +57,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4122192818298315232, guid: 1c3d8e3a3e79383479afab4c22ded4d5, type: 3}
-  - {fileID: 3609018082110429662, guid: 1c3d8e3a3e79383479afab4c22ded4d5, type: 3}
-  - {fileID: 7422524634847466207, guid: 1c3d8e3a3e79383479afab4c22ded4d5, type: 3}
-  - {fileID: -4144156651554294022, guid: 1c3d8e3a3e79383479afab4c22ded4d5, type: 3}
+  - {fileID: 2100000, guid: 6cb570f1243a8324c81232ce1844f4ce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,7 +72,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -85,16 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8170538922887531843
+--- !u!65 &5876388556218012443
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3233070909667567018}
+  m_GameObject: {fileID: 5875499584984294842}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0039230715, y: 0.0036887294, z: 0.004899255}
-  m_Center: {x: -0.0000013884855, y: 0.000007754717, z: 0.002449152}
+  m_Size: {x: 2.0000062, y: 2.0000017, z: 2.0000038}
+  m_Center: {x: -0.0000037550926, y: 0.99999994, z: 0.00000166893}

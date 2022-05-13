@@ -63,7 +63,7 @@ public class grabController : MonoBehaviour
                 }
                 
             }
-            if (grabCheck.collider.tag == "Box" && !itemGrabbed)
+            if ((grabCheck.collider.tag == "Box" ) && !itemGrabbed)
             {
                 
                 health = 0;
@@ -71,13 +71,13 @@ public class grabController : MonoBehaviour
             }
 
             float distToLastPos = Vector3.Distance(grabDetect.position, lastPosition);
-            if (grabCheck.collider.tag == "Box" && itemGrabbed )
+            if ((grabCheck.collider.tag == "Box") && itemGrabbed )
             {
                 health = 300;
                 Damage(waitTime);
             }
          
-            if (grabCheck.collider.tag == "Box" && waitTime >= fixTime && !itemGrabbed)
+            if ((grabCheck.collider.tag == "Box" ) && waitTime >= fixTime && !itemGrabbed)
             {
                 ringHealthBar1.enabled = false;
                 ringHealthBar2.enabled = false;
@@ -86,7 +86,7 @@ public class grabController : MonoBehaviour
                 waitTime = 0.0f;
 
             }
-            else if (grabCheck.collider.tag == "Box" && waitTime >= fixTime && itemGrabbed)
+            else if ((grabCheck.collider.tag == "Box" ) && waitTime >= fixTime && itemGrabbed)
             {
                 Debug.Log("Drop box");
                 itemGrabbed = !itemGrabbed;
@@ -97,15 +97,16 @@ public class grabController : MonoBehaviour
             if (itemGrabbed )
             {
                 grabCheck.collider.gameObject.transform.parent = boxHolder;
+
                 grabCheck.collider.gameObject.transform.position = boxHolder.position;
-                grabCheck.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                //grabCheck.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
 
             }
             else if(!itemGrabbed) 
             {
                 
                 grabCheck.collider.gameObject.transform.parent = null;
-                grabCheck.collider.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+                //grabCheck.collider.gameObject.GetComponent<Rigidbody>().isKinematic = false;
             }
         }
     }
