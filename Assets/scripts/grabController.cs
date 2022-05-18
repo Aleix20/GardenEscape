@@ -89,6 +89,8 @@ public class grabController : MonoBehaviour
             else if ((grabCheck.collider.tag == "Box" ) && waitTime >= fixTime && itemGrabbed)
             {
                 Debug.Log("Drop box");
+                grabCheck.collider.gameObject.transform.position = new Vector3(boxHolder.position.x, -5f, boxHolder.position.z);
+
                 itemGrabbed = !itemGrabbed;
                 waitTime = 0.0f;
             }

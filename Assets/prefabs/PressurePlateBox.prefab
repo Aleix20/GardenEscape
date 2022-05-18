@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1410181033144278211}
   - component: {fileID: 3568761346459591021}
+  - component: {fileID: 3531170043984882934}
+  - component: {fileID: 8492244788178444245}
   m_Layer: 0
   m_Name: PressurePlateBox
   m_TagString: Untagged
@@ -47,6 +49,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 0}
   isactive: 0
+--- !u!65 &3531170043984882934
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790788336470623865}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8492244788178444245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790788336470623865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdf90869a92311d49939c7a83fa61546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 0}
+  timer: 0
 --- !u!1 &2733984508015552764
 GameObject:
   m_ObjectHideFlags: 0
