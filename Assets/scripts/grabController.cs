@@ -15,7 +15,8 @@ public class grabController : MonoBehaviour
 
     private float fixTime = 3.0f;
 
-    bool itemGrabbed = false;
+    bool boxGrabbed = false;
+    bool bucketGrabbed = false;
 
     public Image ringHealthBar1, ringHealthBar2;
     private doorController door = null;
@@ -47,71 +48,142 @@ public class grabController : MonoBehaviour
         
         if (grabCheck.collider != null  )
         {
-            
-            if (grabCheck.collider.tag != "Box" && grabCheck.collider.tag == "PressurePlatePlayer")
+            pressurePlatePlayer(grabCheck);
+            if (!bucketGrabbed)
             {
-                door = grabCheck.collider.GetComponent<doorController>();
-                door.isactive = false;
-                door.door.SetActive(false);
-                Debug.Log("pressure plate player");
+                boxGrab(grabCheck);
             }
-            else
+            if (!boxGrabbed)
             {
-                if (door != null)
-                {
-                    door.door.SetActive(true);
-                }
-                
-            }
-            if ((grabCheck.collider.tag == "Box" ) && !itemGrabbed)
-            {
-                
-                health = 0;
-                Heal(waitTime);
-            }
 
-            float distToLastPos = Vector3.Distance(grabDetect.position, lastPosition);
-            if ((grabCheck.collider.tag == "Box") && itemGrabbed )
-            {
-                health = 300;
-                Damage(waitTime);
-            }
-         
-            if ((grabCheck.collider.tag == "Box" ) && waitTime >= fixTime && !itemGrabbed)
-            {
-                ringHealthBar1.enabled = false;
-                ringHealthBar2.enabled = false;
-                Debug.Log("Pick up box");
-                itemGrabbed = !itemGrabbed;
-                waitTime = 0.0f;
-
-            }
-            else if ((grabCheck.collider.tag == "Box" ) && waitTime >= fixTime && itemGrabbed)
-            {
-                Debug.Log("Drop box");
-                grabCheck.collider.gameObject.transform.position = new Vector3(boxHolder.position.x, -5f, boxHolder.position.z);
-
-                itemGrabbed = !itemGrabbed;
-                waitTime = 0.0f;
-            }
-
-            
-            if (itemGrabbed )
-            {
-                grabCheck.collider.gameObject.transform.parent = boxHolder;
-
-                grabCheck.collider.gameObject.transform.position = boxHolder.position;
-                //grabCheck.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
-
-            }
-            else if(!itemGrabbed) 
-            {
-                
-                grabCheck.collider.gameObject.transform.parent = null;
-                //grabCheck.collider.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+                bucketGrab(grabCheck);
             }
         }
     }
+
+    private void bucketGrab(RaycastHit grabCheck)
+    {
+        if ((grabCheck.collider.tag == "Bucket") && !bucketGrabbed)
+        {
+
+            health = 0;
+            Heal(waitTime);
+        }
+
+        float distToLastPos = Vector3.Distance(grabDetect.position, lastPosition);
+        if ((grabCheck.collider.tag == "Bucket") && bucketGrabbed)
+        {
+            health = 300;
+            Damage(waitTime);
+        }
+
+        if ((grabCheck.collider.tag == "Bucket") && waitTime >= fixTime && !bucketGrabbed)
+        {
+            ringHealthBar1.enabled = false;
+            ringHealthBar2.enabled = false;
+            Debug.Log("Pick up box");
+            bucketGrabbed = !bucketGrabbed;
+            waitTime = 0.0f;
+
+        }
+        else if ((grabCheck.collider.tag == "Bucket") && waitTime >= fixTime && bucketGrabbed)
+        {
+            Debug.Log("Drop box");
+            grabCheck.collider.gameObject.transform.position = new Vector3(boxHolder.position.x, -5f, boxHolder.position.z);
+
+            bucketGrabbed = !bucketGrabbed;
+            waitTime = 0.0f;
+        }
+
+
+        if (bucketGrabbed)
+        {
+            grabCheck.collider.gameObject.transform.parent = boxHolder;
+
+            grabCheck.collider.gameObject.transform.position = boxHolder.position;
+            //grabCheck.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+
+        }
+        else if (!bucketGrabbed)
+        {
+
+            grabCheck.collider.gameObject.transform.parent = null;
+            //grabCheck.collider.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        }
+    }
+
+    private void pressurePlatePlayer(RaycastHit grabCheck)
+    {
+        if (grabCheck.collider.tag != "Box" && grabCheck.collider.tag == "PressurePlatePlayer")
+        {
+            door = grabCheck.collider.GetComponent<doorController>();
+            door.isactive = false;
+            door.door.SetActive(false);
+            Debug.Log("pressure plate player");
+        }
+        else
+        {
+            if (door != null)
+            {
+                door.door.SetActive(true);
+            }
+
+        }
+
+    }
+
+    private void boxGrab(RaycastHit grabCheck)
+    {
+        
+        if ((grabCheck.collider.tag == "Box") && !boxGrabbed)
+        {
+
+            health = 0;
+            Heal(waitTime);
+        }
+
+        float distToLastPos = Vector3.Distance(grabDetect.position, lastPosition);
+        if ((grabCheck.collider.tag == "Box") && boxGrabbed)
+        {
+            health = 300;
+            Damage(waitTime);
+        }
+
+        if ((grabCheck.collider.tag == "Box") && waitTime >= fixTime && !boxGrabbed)
+        {
+            ringHealthBar1.enabled = false;
+            ringHealthBar2.enabled = false;
+            Debug.Log("Pick up box");
+            boxGrabbed = !boxGrabbed;
+            waitTime = 0.0f;
+
+        }
+        else if ((grabCheck.collider.tag == "Box") && waitTime >= fixTime && boxGrabbed)
+        {
+            Debug.Log("Drop box");
+            grabCheck.collider.gameObject.transform.position = new Vector3(boxHolder.position.x, -5f, boxHolder.position.z);
+
+            boxGrabbed = !boxGrabbed;
+            waitTime = 0.0f;
+        }
+
+
+        if (boxGrabbed)
+        {
+            grabCheck.collider.gameObject.transform.parent = boxHolder;
+
+            grabCheck.collider.gameObject.transform.position = boxHolder.position;
+            //grabCheck.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+
+        }
+        else if (!boxGrabbed)
+        {
+
+            grabCheck.collider.gameObject.transform.parent = null;
+            //grabCheck.collider.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        }
+    }
+
     void LateUpdate()
     {
 
