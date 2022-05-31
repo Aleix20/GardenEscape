@@ -11,11 +11,12 @@ public class fireWall : MonoBehaviour
     [SerializeField]
     public GameObject fireWallObject;
     public GameObject waterSplash;
+
     // Start is called before the first frame update
     void Start()
     {
         startScale = 0;
-        targetScale = 20; 
+        targetScale = 20;
     }
 
 

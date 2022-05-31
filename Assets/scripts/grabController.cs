@@ -17,9 +17,10 @@ public class grabController : MonoBehaviour
 
     bool boxGrabbed = false;
     bool bucketGrabbed = false;
-
+    
     public Image ringHealthBar1, ringHealthBar2;
     private doorController door = null;
+    private RaycastHit grabCheck;
 
     float health, maxHealth = 300;
     float lerpSpeed;
@@ -30,7 +31,7 @@ public class grabController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("GrabDetect pos is: " + grabDetect.position);
+        //Debug.Log("GrabDetect pos is: " + grabDetect.position);
         ringHealthBar1.rectTransform.position = grabDetect.position;
         ringHealthBar2.rectTransform.position = grabDetect.position;
         //Debug.Log("ringHealthBar pos is: " + ringHealthBar.rectTransform.position);
@@ -41,27 +42,27 @@ public class grabController : MonoBehaviour
         HealthBarFiller();
         ColorChanger();
 
-        RaycastHit grabCheck;
-        Physics.Raycast(grabDetect.position, Vector3.down, out grabCheck ,rayDist );
-        Debug.Log("WaitTime is: " + waitTime);
-        Debug.Log(grabCheck.collider.tag);
         
+        Physics.Raycast(grabDetect.position, Vector3.down, out grabCheck ,rayDist );
+        //Debug.Log("WaitTime is: " + waitTime);
+        //Debug.Log(grabCheck.collider.tag);
+      
         if (grabCheck.collider != null  )
         {
-            pressurePlatePlayer(grabCheck);
+            pressurePlatePlayer();
             if (!bucketGrabbed)
             {
-                boxGrab(grabCheck);
+                boxGrab();
             }
             if (!boxGrabbed)
             {
 
-                bucketGrab(grabCheck);
+                bucketGrab();
             }
         }
     }
 
-    private void bucketGrab(RaycastHit grabCheck)
+    private void bucketGrab()
     {
         if ((grabCheck.collider.tag == "Bucket") && !bucketGrabbed)
         {
@@ -81,14 +82,14 @@ public class grabController : MonoBehaviour
         {
             ringHealthBar1.enabled = false;
             ringHealthBar2.enabled = false;
-            Debug.Log("Pick up box");
+            //Debug.Log("Pick up box");
             bucketGrabbed = !bucketGrabbed;
             waitTime = 0.0f;
 
         }
         else if ((grabCheck.collider.tag == "Bucket") && waitTime >= fixTime && bucketGrabbed)
         {
-            Debug.Log("Drop box");
+            //Debug.Log("Drop box");
             grabCheck.collider.gameObject.transform.position = new Vector3(boxHolder.position.x, -5f, boxHolder.position.z);
 
             bucketGrabbed = !bucketGrabbed;
@@ -112,14 +113,15 @@ public class grabController : MonoBehaviour
         }
     }
 
-    private void pressurePlatePlayer(RaycastHit grabCheck)
+    private void pressurePlatePlayer()
     {
-        if (grabCheck.collider.tag != "Box" && grabCheck.collider.tag == "PressurePlatePlayer")
+        Debug.Log(grabCheck.collider.tag);
+        if (!boxGrabbed && !bucketGrabbed && grabCheck.collider.tag.Equals( "PressurePlatePlayer"))
         {
             door = grabCheck.collider.GetComponent<doorController>();
             door.isactive = false;
             door.door.SetActive(false);
-            Debug.Log("pressure plate player");
+            //Debug.Log("pressure plate player");
         }
         else
         {
@@ -132,7 +134,7 @@ public class grabController : MonoBehaviour
 
     }
 
-    private void boxGrab(RaycastHit grabCheck)
+    private void boxGrab()
     {
         
         if ((grabCheck.collider.tag == "Box") && !boxGrabbed)
@@ -183,7 +185,22 @@ public class grabController : MonoBehaviour
             //grabCheck.collider.gameObject.GetComponent<Rigidbody>().isKinematic = false;
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (boxGrabbed || bucketGrabbed)
+        {
+            if (other.tag.Equals("wall"))
+            {
+                boxVariables currentItem = grabCheck.collider.GetComponent<boxVariables>();
 
+                boxGrabbed = false;
+                bucketGrabbed = false;
+                grabCheck.collider.gameObject.transform.position = currentItem.initPosition;
+
+            }
+        }
+    }
+    
     void LateUpdate()
     {
 

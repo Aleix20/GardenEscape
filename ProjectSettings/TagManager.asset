@@ -25,6 +25,7 @@ TagManager:
   - ChargeBar
   - PressurePlatePlayer
   - Bucket
+  - wall
   layers:
   - Default
   - TransparentFX

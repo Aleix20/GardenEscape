@@ -91,8 +91,8 @@ GameObject:
   m_Component:
   - component: {fileID: 746186707522591666}
   - component: {fileID: 8777444252241381798}
-  - component: {fileID: 686605943}
   - component: {fileID: 1618236373555705056}
+  - component: {fileID: 9073166380714858557}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player1
@@ -132,19 +132,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!135 &686605943
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746186707522591664}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1618236373555705056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +150,19 @@ MonoBehaviour:
   InvertX: 1
   InvertY: 0
   CameraOffset: 10
+--- !u!65 &9073166380714858557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746186707522591664}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6, y: 0.5, z: 6}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &5349642512159215241
 PrefabInstance:
   m_ObjectHideFlags: 0
