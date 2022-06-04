@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTypeDate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TypeDate>
+    <guid>842f43ac94b4b4f72ac0898650ddcc44</guid>
+    <fileName>Assets/Cleaner/Editor/AssetCollector.cs</fileName>
+    <timeStamp>2015-12-09T19:51:26+01:00</timeStamp>
+    <typeFullName>
+      <string>AssetClean.AssetCollector</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp-Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>805140a4856714e288ea84985d3023df</guid>
+    <fileName>Assets/Cleaner/Editor/AssetReferenceCollection.cs</fileName>
+    <timeStamp>2015-12-09T19:51:26+01:00</timeStamp>
+    <typeFullName>
+      <string>AssetReferenceCollection</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp-Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>202c278a17939b24c8b79c0ee1f94d8f</guid>
+    <fileName>Assets/Cleaner/Editor/ClassReferenceCollection.cs</fileName>
+    <timeStamp>2015-12-09T19:51:26+01:00</timeStamp>
+    <typeFullName>
+      <string>AssetClean.ClassReferenceCollection</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp-Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>0d05386265df34bac8d0b6df44aa494c</guid>
+    <fileName>Assets/Cleaner/Editor/CollectionData.cs</fileName>
+    <timeStamp>2015-12-09T19:51:26+01:00</timeStamp>
+    <typeFullName>
+      <string>CollectionData</string>
+      <string>TypeDate</string>
+      <string>IReferenceCollection</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp-Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>74eec3bfba0594259ac2843353c082a3</guid>
+    <fileName>Assets/Cleaner/Editor/FindUnusedAssetsWindow.cs</fileName>
+    <timeStamp>2015-12-09T19:51:26+01:00</timeStamp>
+    <typeFullName>
+      <string>AssetClean.FindUnusedAssetsWindow</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp-Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>2c4f01a79a77a45a9a84004cc2b78098</guid>
+    <fileName>Assets/Cleaner/Editor/ShaderReferenceCollection.cs</fileName>
+    <timeStamp>2015-12-09T19:51:26+01:00</timeStamp>
+    <typeFullName>
+      <string>AssetClean.ShaderReferenceCollection</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp-Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>cd31e59368b2e8d48b8006e59a9ea55a</guid>
+    <fileName>Assets/scripts/boxVariables.cs</fileName>
+    <timeStamp>2022-05-31T16:59:21.6118232+02:00</timeStamp>
+    <typeFullName>
+      <string>boxVariables</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>c2c52623b8500da4db5c8bb8dd37a028</guid>
+    <fileName>Assets/scripts/DeepTracking.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.463092+02:00</timeStamp>
+    <typeFullName>
+      <string>DeepTracking</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>224bee8655dd1e5428e51c71af7ebf45</guid>
+    <fileName>Assets/scripts/DeepTrackingReceiver.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4640897+02:00</timeStamp>
+    <typeFullName>
+      <string>DeepTrackingReceiver</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5494df577230edf49bf491e84e8904ed</guid>
+    <fileName>Assets/scripts/doorController.cs</fileName>
+    <timeStamp>2022-05-18T20:44:35.4779437+02:00</timeStamp>
+    <typeFullName>
+      <string>doorController</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>09ee29cc785c79d418a2de1d31d6d092</guid>
+    <fileName>Assets/scripts/fireWall.cs</fileName>
+    <timeStamp>2022-05-31T16:59:21.6168089+02:00</timeStamp>
+    <typeFullName>
+      <string>fireWall</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>453a8cd163ef70e4cad0b668a0fb9bd3</guid>
+    <fileName>Assets/scripts/grabController.cs</fileName>
+    <timeStamp>2022-05-31T16:59:21.6198286+02:00</timeStamp>
+    <typeFullName>
+      <string>grabController</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>31d9c509a40fbc24495b9b11eef7d545</guid>
+    <fileName>Assets/scripts/Health.cs</fileName>
+    <timeStamp>2022-05-07T10:58:00.7758969+02:00</timeStamp>
+    <typeFullName>
+      <string>Health</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>b9960f52f70dbf44ba4577fd0f817eb6</guid>
+    <fileName>Assets/scripts/PlayerDetection.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4650867+02:00</timeStamp>
+    <typeFullName>
+      <string>PlayerDetection</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>cdf90869a92311d49939c7a83fa61546</guid>
+    <fileName>Assets/scripts/pressurePlateBox.cs</fileName>
+    <timeStamp>2022-06-04T10:02:02.1227433+02:00</timeStamp>
+    <typeFullName>
+      <string>pressurePlateBox</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>45fffd7709d37ce49a6be67ab9c48e18</guid>
+    <fileName>Assets/scripts/utilities/Audiopan.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4680785+02:00</timeStamp>
+    <typeFullName>
+      <string>Audiopan</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>547c48d7271578547a26258cfbcdefb4</guid>
+    <fileName>Assets/scripts/utilities/AutoTimerForTrials.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4690758+02:00</timeStamp>
+    <typeFullName>
+      <string>AutoTimerForTrials</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>c861041471971a44b8b004e21fb37e49</guid>
+    <fileName>Assets/scripts/utilities/CreationTable.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4710705+02:00</timeStamp>
+    <typeFullName>
+      <string>CreationTable</string>
+      <string>CreationtableItem</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>0bd5e5e49a9e1b7408af347b229ae4f2</guid>
+    <fileName>Assets/scripts/utilities/doublescreenCameramanager.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4770538+02:00</timeStamp>
+    <typeFullName>
+      <string>doublescreenCameramanager</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>c3a6e664a5309db4c888d50c28476776</guid>
+    <fileName>Assets/scripts/utilities/Logger.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4730655+02:00</timeStamp>
+    <typeFullName>
+      <string>Logger</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>dfc62e0fd1d7a594d9019b89be6b90d8</guid>
+    <fileName>Assets/scripts/utilities/ParticleTypeEnum.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4740626+02:00</timeStamp>
+    <typeFullName>
+      <string>ParticleType</string>
+      <string>ParticleTypeMethods</string>
+      <string>RoamingObjectType</string>
+      <string>RoamingObjectMethods</string>
+      <string>EffectType</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>a378bc09648a3384fb4bc29feb4614c1</guid>
+    <fileName>Assets/scripts/utilities/UVRotatonScript.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4750601+02:00</timeStamp>
+    <typeFullName>
+      <string>UVRotatonScript</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>e46a05ca91ca73741920599960a859a7</guid>
+    <fileName>Assets/scripts/utilities/WorldParticleAssingment.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4760569+02:00</timeStamp>
+    <typeFullName>
+      <string>WorldParticleAssingment</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>c42e5a96893570f4da7273114a9380f7</guid>
+    <fileName>Assets/scripts/utilities/utility tracking for unity/Uniducial/FiducialController.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.483038+02:00</timeStamp>
+    <typeFullName>
+      <string>FiducialController</string>
+      <string>FiducialController+RotationAxis</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>f86517c4c535ae047b416e0c3c596326</guid>
+    <fileName>Assets/scripts/utilities/utility tracking for unity/Uniducial/TuioManager.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4979984+02:00</timeStamp>
+    <typeFullName>
+      <string>UniducialLibrary.TuioManager</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>a1a76253d08a1b945bf7bdbc40048987</guid>
+    <fileName>Assets/scripts/utilities/utility tracking for unity/Uniducial/Editor/UniducialInspector.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4810449+02:00</timeStamp>
+    <typeFullName>
+      <string>UniducialInspector</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp-Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>047ce41870e9d494a89913d3ab1cf6c9</guid>
+    <fileName>Assets/scripts/utilities/utility tracking for unity/Uniducial/Editor/UniducialMenu.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.482041+02:00</timeStamp>
+    <typeFullName>
+      <string>UniducialMenu</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp-Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>1a54ff84b4ba609449f71ed0c9c350b7</guid>
+    <fileName>Assets/scripts/utilities/utility tracking for unity/Uniducial/TUIOConnector/OSCBundle.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4850335+02:00</timeStamp>
+    <typeFullName>
+      <string>OSC.NET.OSCBundle</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>7c597f5a3ffbbf2439e13f702bbd4ccb</guid>
+    <fileName>Assets/scripts/utilities/utility tracking for unity/Uniducial/TUIOConnector/OSCMessage.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4860307+02:00</timeStamp>
+    <typeFullName>
+      <string>OSC.NET.OSCMessage</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>134fcb7d99c706c44bac6b1bff3f1b67</guid>
+    <fileName>Assets/scripts/utilities/utility tracking for unity/Uniducial/TUIOConnector/OSCPacket.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4880258+02:00</timeStamp>
+    <typeFullName>
+      <string>OSC.NET.OSCPacket</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>fadfb0fbca129504e823fa291812c315</guid>
+    <fileName>Assets/scripts/utilities/utility tracking for unity/Uniducial/TUIOConnector/OSCReceiver.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4890227+02:00</timeStamp>
+    <typeFullName>
+      <string>OSC.NET.OSCReceiver</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>adf80050148422444a8d707cb72fe53a</guid>
+    <fileName>Assets/scripts/utilities/utility tracking for unity/Uniducial/TUIOConnector/OSCTransmitter.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4900201+02:00</timeStamp>
+    <typeFullName>
+      <string>OSC.NET.OSCTransmitter</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5996e45972882a24fb403286db364fea</guid>
+    <fileName>Assets/scripts/utilities/utility tracking for unity/Uniducial/TUIOConnector/TuioClient.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4920139+02:00</timeStamp>
+    <typeFullName>
+      <string>TUIO.TuioClient</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>f2f3f062ca03a9f4a97eb504dd9f5fa9</guid>
+    <fileName>Assets/scripts/utilities/utility tracking for unity/Uniducial/TUIOConnector/TuioContainer.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4930112+02:00</timeStamp>
+    <typeFullName>
+      <string>TUIO.TuioContainer</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>79e75b3d42c3ba34f9ec2dd2dbb19c70</guid>
+    <fileName>Assets/scripts/utilities/utility tracking for unity/Uniducial/TUIOConnector/TuioCursor.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.494009+02:00</timeStamp>
+    <typeFullName>
+      <string>TUIO.TuioCursor</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5a70fcbd463834d4a8bb94ca55c282f4</guid>
+    <fileName>Assets/scripts/utilities/utility tracking for unity/Uniducial/TUIOConnector/TuioListener.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4950065+02:00</timeStamp>
+    <typeFullName>
+      <string>TUIO.TuioListener</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>757fde5688fa60640a277b7cc96e1b03</guid>
+    <fileName>Assets/scripts/utilities/utility tracking for unity/Uniducial/TUIOConnector/TuioObject.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4950065+02:00</timeStamp>
+    <typeFullName>
+      <string>TUIO.TuioObject</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5eb69c556fad8124e8632b9d0f408fdd</guid>
+    <fileName>Assets/scripts/utilities/utility tracking for unity/Uniducial/TUIOConnector/TuioPoint.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4960038+02:00</timeStamp>
+    <typeFullName>
+      <string>TUIO.TuioPoint</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>049749512a91f4c4dba7078931804cd0</guid>
+    <fileName>Assets/scripts/utilities/utility tracking for unity/Uniducial/TUIOConnector/TuioTime.cs</fileName>
+    <timeStamp>2022-05-06T14:05:29.4970006+02:00</timeStamp>
+    <typeFullName>
+      <string>TUIO.TuioTime</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+</ArrayOfTypeDate>
