@@ -26,6 +26,7 @@ TagManager:
   - PressurePlatePlayer
   - Bucket
   - wall
+  - nextLevel
   layers:
   - Default
   - TransparentFX

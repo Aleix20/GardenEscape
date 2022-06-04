@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
 public class pressurePlateBox : MonoBehaviour
 {
     [SerializeField]
     public GameObject door;
     public float timer;
+    public int indexLevel;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +35,14 @@ public class pressurePlateBox : MonoBehaviour
         {
             // Player entered collider!
             door.SetActive(false);
+            if (this.tag.Equals("nextLevel"))
+            {
+                SceneManager.LoadScene(indexLevel);
+            }
         }
+   
+        
+      
     }
 
     private void OnTriggerStay(Collider collider)

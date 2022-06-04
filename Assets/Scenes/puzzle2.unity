@@ -1314,6 +1314,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressurePlateBoxGreen
       objectReference: {fileID: 0}
+    - target: {fileID: 1790788336470623865, guid: 41ea7a747c882e84a9c02b1cb71a892b,
+        type: 3}
+      propertyPath: m_TagString
+      value: nextLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 2619420296748191514, guid: 41ea7a747c882e84a9c02b1cb71a892b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1354,6 +1359,11 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 1249043870}
+    - target: {fileID: 8492244788178444245, guid: 41ea7a747c882e84a9c02b1cb71a892b,
+        type: 3}
+      propertyPath: indexLevel
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41ea7a747c882e84a9c02b1cb71a892b, type: 3}
 --- !u!1001 &1087453609
