@@ -212,7 +212,7 @@ public class grabController : MonoBehaviour
 
         float distToLastPos = Vector3.Distance(grabDetect.position, lastPosition);
 
-        if (distToLastPos < 0.3f)
+        if (distToLastPos < 1.5f)
         {
             
             waitTime += Time.deltaTime;
