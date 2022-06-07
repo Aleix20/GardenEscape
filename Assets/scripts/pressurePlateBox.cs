@@ -35,6 +35,7 @@ public class pressurePlateBox : MonoBehaviour
         {
             // Player entered collider!
             door.SetActive(false);
+            SoundManager.Instance.PlayDoorOpenClip();
             if (this.tag.Equals("nextLevel"))
             {
                 SceneManager.LoadScene(indexLevel);

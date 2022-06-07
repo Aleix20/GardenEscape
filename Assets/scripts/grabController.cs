@@ -69,6 +69,7 @@ public class grabController : MonoBehaviour
 
             health = 0;
             Heal(waitTime);
+            
         }
 
         float distToLastPos = Vector3.Distance(grabDetect.position, lastPosition);
@@ -76,6 +77,7 @@ public class grabController : MonoBehaviour
         {
             health = 300;
             Damage(waitTime);
+
         }
 
         if ((grabCheck.collider.tag == "Bucket") && waitTime >= fixTime && !bucketGrabbed)
@@ -85,6 +87,7 @@ public class grabController : MonoBehaviour
             //Debug.Log("Pick up box");
             bucketGrabbed = !bucketGrabbed;
             waitTime = 0.0f;
+            SoundManager.Instance.PlayGrabClip();
 
         }
         else if ((grabCheck.collider.tag == "Bucket") && waitTime >= fixTime && bucketGrabbed)
@@ -94,6 +97,7 @@ public class grabController : MonoBehaviour
 
             bucketGrabbed = !bucketGrabbed;
             waitTime = 0.0f;
+            SoundManager.Instance.PlayGrabClip();
         }
 
 
@@ -142,6 +146,7 @@ public class grabController : MonoBehaviour
 
             health = 0;
             Heal(waitTime);
+            
         }
 
         float distToLastPos = Vector3.Distance(grabDetect.position, lastPosition);
@@ -158,7 +163,7 @@ public class grabController : MonoBehaviour
             Debug.Log("Pick up box");
             boxGrabbed = !boxGrabbed;
             waitTime = 0.0f;
-
+            SoundManager.Instance.PlayGrabClip();
         }
         else if ((grabCheck.collider.tag == "Box") && waitTime >= fixTime && boxGrabbed)
         {
@@ -167,6 +172,7 @@ public class grabController : MonoBehaviour
 
             boxGrabbed = !boxGrabbed;
             waitTime = 0.0f;
+            SoundManager.Instance.PlayGrabClip();
         }
 
 

@@ -27,6 +27,7 @@ public class fireWall : MonoBehaviour
         {
             // Player entered collider!
             Destroy(fireWallObject);
+            SoundManager.Instance.PlayFireExtinguishClip();
             waterSplash.SetActive(true);
             waterSplash.transform.position = fireWallObject.transform.position;
             //while (percentScaled < 1f) // 1
