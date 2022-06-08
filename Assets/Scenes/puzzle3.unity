@@ -682,8 +682,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359012860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.2, y: 0, z: 22.3}
-  m_LocalScale: {x: 20, y: 10, z: 4.42807}
+  m_LocalPosition: {x: 43.2, y: 0, z: 22.6}
+  m_LocalScale: {x: 15, y: 10, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 23
@@ -704,10 +704,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 746186705940698879, guid: cd1cb5635f8dbe649adff6525a31cfd3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f98db2a6cdff5104d9d49a1db805c633, type: 2}
     - target: {fileID: 746186707522591664, guid: cd1cb5635f8dbe649adff6525a31cfd3,
         type: 3}
       propertyPath: m_Name
-      value: Red Player
+      value: Blue Player
       objectReference: {fileID: 0}
     - target: {fileID: 746186707522591666, guid: cd1cb5635f8dbe649adff6525a31cfd3,
         type: 3}
@@ -856,7 +861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1387,7 +1392,7 @@ PrefabInstance:
     - target: {fileID: 108949185368963224, guid: 34e3993fc976e214e84aadca07499fde,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 49.1
+      value: 49.4
       objectReference: {fileID: 0}
     - target: {fileID: 108949185368963224, guid: 34e3993fc976e214e84aadca07499fde,
         type: 3}
@@ -1660,7 +1665,7 @@ PrefabInstance:
     - target: {fileID: 4578685066681065751, guid: e91bf20fbae93864f9434425ee266cee,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27
+      value: 26.4
       objectReference: {fileID: 0}
     - target: {fileID: 4578685066681065751, guid: e91bf20fbae93864f9434425ee266cee,
         type: 3}
@@ -1802,7 +1807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2117,8 +2122,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1306472087}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 34.1, y: 0, z: 78.6}
-  m_LocalScale: {x: 20, y: 10, z: 4.42807}
+  m_LocalPosition: {x: 32.9, y: 0, z: 78}
+  m_LocalScale: {x: 15, y: 10, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 24
@@ -2932,7 +2937,7 @@ PrefabInstance:
     - target: {fileID: 2852463499036213008, guid: 6adf4a2b756a63141ae5bd191356643b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.3
+      value: 43.4
       objectReference: {fileID: 0}
     - target: {fileID: 2852463499036213008, guid: 6adf4a2b756a63141ae5bd191356643b,
         type: 3}
@@ -3006,7 +3011,7 @@ PrefabInstance:
     - target: {fileID: 108949185368963224, guid: 34e3993fc976e214e84aadca07499fde,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.7
+      value: 26.4
       objectReference: {fileID: 0}
     - target: {fileID: 108949185368963224, guid: 34e3993fc976e214e84aadca07499fde,
         type: 3}
