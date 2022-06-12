@@ -18,6 +18,7 @@ public class pressurePlateBox : MonoBehaviour
 
     private void Update()
     {
+        //Time to open the door
         if (timer > 0)
         {
             timer -= Time.deltaTime;
@@ -30,7 +31,7 @@ public class pressurePlateBox : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        string a = collider.tag;
+        //Open the door if detects a Box on top
         if (collider.tag.Equals("Box") )
         {
             // Player entered collider!

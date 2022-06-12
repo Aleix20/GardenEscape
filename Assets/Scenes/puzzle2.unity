@@ -638,8 +638,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ee29cc785c79d418a2de1d31d6d092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScale: 20
-  timeToReachTarget: 3
   fireWallObject: {fileID: 350949467}
   waterSplash: {fileID: 136046719209809137}
 --- !u!1 &383269209
@@ -1309,7 +1307,7 @@ PrefabInstance:
     - target: {fileID: 5261076004293080658, guid: a2aaaa094093a294aade9f5a5ce62bbb,
         type: 3}
       propertyPath: MarkerID
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6137497490245145672, guid: a2aaaa094093a294aade9f5a5ce62bbb,
         type: 3}
@@ -1320,7 +1318,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c2f9c3d3dcc7e6648a24a1445f06915e, type: 2}
+      objectReference: {fileID: 2100000, guid: c1fc0372da6682f41854f7e1716934cb, type: 2}
     - target: {fileID: 6137497491829922048, guid: a2aaaa094093a294aade9f5a5ce62bbb,
         type: 3}
       propertyPath: m_RootOrder
@@ -1389,7 +1387,7 @@ PrefabInstance:
     - target: {fileID: 6137497491829922050, guid: a2aaaa094093a294aade9f5a5ce62bbb,
         type: 3}
       propertyPath: m_Name
-      value: Yellow Player
+      value: Red Player
       objectReference: {fileID: 0}
     - target: {fileID: 6878748875590714565, guid: a2aaaa094093a294aade9f5a5ce62bbb,
         type: 3}
@@ -2368,7 +2366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9960f52f70dbf44ba4577fd0f817eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  live: 0
+  live: 1
   manualSpeed: 0.005
   positions: []
 --- !u!4 &1915285908

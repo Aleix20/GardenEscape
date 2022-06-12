@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Class to save the initial position of any item
 public class boxVariables : MonoBehaviour
 {
     [SerializeField]
     public GameObject box;
-    // Start is called before the first frame update
     public Vector3 initPosition;
    
     void Start()
@@ -14,9 +14,4 @@ public class boxVariables : MonoBehaviour
         initPosition = box.transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

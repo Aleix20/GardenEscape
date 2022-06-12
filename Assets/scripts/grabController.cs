@@ -24,17 +24,17 @@ public class grabController : MonoBehaviour
 
     float health, maxHealth = 300;
     float lerpSpeed;
+
+    //Charge bar starts in 0
     private void Start()
     {
         health = 0;
     }
-    // Update is called once per frame
     void Update()
     {
-        //Debug.Log("GrabDetect pos is: " + grabDetect.position);
+        //Move the chargeBar with the tracker
         ringHealthBar1.rectTransform.position = grabDetect.position;
         ringHealthBar2.rectTransform.position = grabDetect.position;
-        //Debug.Log("ringHealthBar pos is: " + ringHealthBar.rectTransform.position);
         if (health > maxHealth) health = maxHealth;
 
         lerpSpeed = 3f * Time.deltaTime;
@@ -42,10 +42,9 @@ public class grabController : MonoBehaviour
         HealthBarFiller();
         ColorChanger();
 
-        
+        //Create a raycast from the grabcheck to the floor
         Physics.Raycast(grabDetect.position, Vector3.down, out grabCheck ,rayDist );
-        //Debug.Log("WaitTime is: " + waitTime);
-        //Debug.Log(grabCheck.collider.tag);
+
       
         if (grabCheck.collider != null  )
         {
@@ -64,6 +63,7 @@ public class grabController : MonoBehaviour
 
     private void bucketGrab()
     {
+        //Update chargeBar if not grabbed increasing
         if ((grabCheck.collider.tag == "Bucket") && !bucketGrabbed)
         {
 
@@ -71,8 +71,7 @@ public class grabController : MonoBehaviour
             Heal(waitTime);
             
         }
-
-        float distToLastPos = Vector3.Distance(grabDetect.position, lastPosition);
+        //Update chargeBar if grabbed decreasing
         if ((grabCheck.collider.tag == "Bucket") && bucketGrabbed)
         {
             health = 300;
@@ -80,52 +79,49 @@ public class grabController : MonoBehaviour
 
         }
 
+        //Grab the item if we are on top around 3s
         if ((grabCheck.collider.tag == "Bucket") && waitTime >= fixTime && !bucketGrabbed)
         {
             ringHealthBar1.enabled = false;
             ringHealthBar2.enabled = false;
-            //Debug.Log("Pick up box");
             bucketGrabbed = !bucketGrabbed;
             waitTime = 0.0f;
             SoundManager.Instance.PlayGrabClip();
 
         }
+        //Leave the item if we don't move around 3s
         else if ((grabCheck.collider.tag == "Bucket") && waitTime >= fixTime && bucketGrabbed)
         {
-            //Debug.Log("Drop box");
             grabCheck.collider.gameObject.transform.position = new Vector3(boxHolder.position.x, -5f, boxHolder.position.z);
-
             bucketGrabbed = !bucketGrabbed;
             waitTime = 0.0f;
             SoundManager.Instance.PlayGrabClip();
         }
 
-
+        //Update position if grabbed
         if (bucketGrabbed)
         {
             grabCheck.collider.gameObject.transform.parent = boxHolder;
 
             grabCheck.collider.gameObject.transform.position = boxHolder.position;
-            //grabCheck.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
 
         }
         else if (!bucketGrabbed)
         {
 
             grabCheck.collider.gameObject.transform.parent = null;
-            //grabCheck.collider.gameObject.GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 
     private void pressurePlatePlayer()
     {
-        Debug.Log(grabCheck.collider.tag);
+        //Only active if you are on top of the pressure plate
+        //if we don't have any item grabbed, you can activate the pressure plate player
         if (!boxGrabbed && !bucketGrabbed && grabCheck.collider.tag.Equals( "PressurePlatePlayer"))
         {
             door = grabCheck.collider.GetComponent<doorController>();
             door.isactive = false;
             door.door.SetActive(false);
-            //Debug.Log("pressure plate player");
         }
         else
         {
@@ -140,7 +136,7 @@ public class grabController : MonoBehaviour
 
     private void boxGrab()
     {
-        
+        //Update chargeBar if not grabbed increasing
         if ((grabCheck.collider.tag == "Box") && !boxGrabbed)
         {
 
@@ -148,13 +144,13 @@ public class grabController : MonoBehaviour
             Heal(waitTime);
             
         }
-
-        float distToLastPos = Vector3.Distance(grabDetect.position, lastPosition);
+        //Update chargeBar if grabbed decreasing
         if ((grabCheck.collider.tag == "Box") && boxGrabbed)
         {
             health = 300;
             Damage(waitTime);
         }
+        //Grab the item if we are on top around 3s
 
         if ((grabCheck.collider.tag == "Box") && waitTime >= fixTime && !boxGrabbed)
         {
@@ -165,6 +161,7 @@ public class grabController : MonoBehaviour
             waitTime = 0.0f;
             SoundManager.Instance.PlayGrabClip();
         }
+        //Leave the item if we don't move around 3s
         else if ((grabCheck.collider.tag == "Box") && waitTime >= fixTime && boxGrabbed)
         {
             Debug.Log("Drop box");
@@ -175,28 +172,28 @@ public class grabController : MonoBehaviour
             SoundManager.Instance.PlayGrabClip();
         }
 
-
+        //Update position if grabbed
         if (boxGrabbed)
         {
             grabCheck.collider.gameObject.transform.parent = boxHolder;
 
             grabCheck.collider.gameObject.transform.position = boxHolder.position;
-            //grabCheck.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
 
         }
         else if (!boxGrabbed)
         {
 
             grabCheck.collider.gameObject.transform.parent = null;
-            //grabCheck.collider.gameObject.GetComponent<Rigidbody>().isKinematic = false;
         }
     }
     private void OnTriggerEnter(Collider other)
     {
+        //If the tracker has some item grabbed check wall collisions
         if (boxGrabbed || bucketGrabbed)
         {
             if (other.tag.Equals("wall"))
             {
+                //If the onject collide with a wall, set the object to the initial position
                 boxVariables currentItem = grabCheck.collider.GetComponent<boxVariables>();
 
                 boxGrabbed = false;
@@ -209,9 +206,10 @@ public class grabController : MonoBehaviour
     
     void LateUpdate()
     {
-
+        //Check the distance with the previous position of the tracker
         float distToLastPos = Vector3.Distance(grabDetect.position, lastPosition);
 
+        //If the tracker is not moving, increase the timer
         if (distToLastPos < 1.5f)
         {
             
@@ -220,6 +218,7 @@ public class grabController : MonoBehaviour
         }
         else
         {
+            //If the tracker is moving, update the position
             waitTime = 0.0f;
             lastPosition = grabDetect.position;
         }
@@ -230,13 +229,14 @@ public class grabController : MonoBehaviour
 
     void HealthBarFiller()
     {
-
+        //Fill the charge bar gradually
         ringHealthBar1.fillAmount = Mathf.Lerp(ringHealthBar1.fillAmount, (health / maxHealth), lerpSpeed);
         ringHealthBar2.fillAmount = Mathf.Lerp(ringHealthBar2.fillAmount, (health / maxHealth), lerpSpeed);
 
     }
     void ColorChanger()
     {
+        //Changing color from red to green gradually
         Color healthColor = Color.Lerp(Color.red, Color.green, (health / maxHealth));
         ringHealthBar1.color = healthColor;
         ringHealthBar2.color = healthColor;
@@ -247,6 +247,7 @@ public class grabController : MonoBehaviour
 
     public void Damage(float damagePoints)
     {
+        //Reduce the chargeBar gradually
         if (health > 0)
         {
             ringHealthBar1.enabled = true;
@@ -264,7 +265,7 @@ public class grabController : MonoBehaviour
     }
     public void Heal(float healingPoints)
     {
-
+        //Increase ChargeBar gradually
         if (health < maxHealth)
         {
             ringHealthBar1.enabled = true;
